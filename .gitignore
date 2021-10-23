@@ -1,6 +1,9 @@
 *.csv
 *.zip
 
+kv-20.3.18/*
+tarea-programada-2.iml
+
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml
