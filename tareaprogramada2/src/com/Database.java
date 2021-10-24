@@ -12,7 +12,7 @@ public class Database {
     private String[] helperHosts;
     private static String className;
     private static Database db;
-    private static KVStore kvstore;
+    private KVStore kvstore;
 
     private Database() {
         className = "Database";
@@ -51,6 +51,10 @@ public class Database {
     private void configureStore() {
         KVStoreConfig kConfig = new KVStoreConfig("myStore", getHelperHosts());
         kvstore = KVStoreFactory.getStore(kConfig);
+    }
+
+    public KVStore getKvStore() {
+        return this.kvstore;
     }
 
     public void printHelperHosts() {

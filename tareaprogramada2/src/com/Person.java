@@ -1,7 +1,7 @@
 package com;
 
 public class Person {
-    String id, fn, ln, gender, birthDate, phoneNumber, email;
+    private String id, fn, ln, gender, birthDate, phoneNumber, email, fullName;
     private String className;
 
     public Person(String id, String fn, String ln, String gender, String birthDate, String phoneNumber, String email) {
@@ -13,7 +13,10 @@ public class Person {
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.className = "Person";
+        this.fullName = this.fn + " " + this.ln;
     }
+
+    public Person() {}
 
     public void printPersonInformation() {
         System.out.printf("[%s] - ", className);
@@ -24,6 +27,10 @@ public class Person {
         System.out.printf("Phone: %s, ", getPhoneNumber());
         System.out.printf("Email: %s\n", getEmail());
     }
+
+    public String getFullName() { return this.fullName; }
+
+    public void setFullName() { this.fullName = this.getFn() + " " + this.getLn(); }
 
     public String getId() {
         return id;
