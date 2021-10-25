@@ -1,6 +1,7 @@
 *.csv
 *.zip
 
+tareaprogramada2/.idea
 tareaprogramada2/out/*
 tareaprogramada2-ejercicio2/out/*
 .idea/
